@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/MINIchat_app/static/css/main.96ef05d7.css",
-    "main.js": "/MINIchat_app/static/js/main.69b3d90e.js",
+    "main.css": "/MINIchat_app/static/css/main.5677bc5f.css",
+    "main.js": "/MINIchat_app/static/js/main.2006d785.js",
+    "static/media/profile4.jpg": "/MINIchat_app/static/media/profile4.d82d380e875b2e181354.jpg",
     "index.html": "/MINIchat_app/index.html",
-    "main.96ef05d7.css.map": "/MINIchat_app/static/css/main.96ef05d7.css.map",
-    "main.69b3d90e.js.map": "/MINIchat_app/static/js/main.69b3d90e.js.map"
+    "main.5677bc5f.css.map": "/MINIchat_app/static/css/main.5677bc5f.css.map",
+    "main.2006d785.js.map": "/MINIchat_app/static/js/main.2006d785.js.map"
   },
   "entrypoints": [
-    "static/css/main.96ef05d7.css",
-    "static/js/main.69b3d90e.js"
+    "static/css/main.5677bc5f.css",
+    "static/js/main.2006d785.js"
   ]
 }
