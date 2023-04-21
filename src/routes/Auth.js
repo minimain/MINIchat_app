@@ -33,7 +33,7 @@ function Auth() {
       data = await signInWithEmailAndPassword(authService, email, password);
     }
     console.log('data->',data);
-   }catch ( error ) {
+   }catch (error){
     console.log('error->',error);
     setError(error.message);
    }
@@ -85,35 +85,7 @@ function Auth() {
       </div>
     </div>
 
-    {/* 
-    
-    <div class="cell">
-    <div class="circle bounce2"></div>
-    <p>bounce 2</p>
-    </div>
 
-    .bounce {
-  animation: bounce 2s ease infinite;
-}
-@keyframes bounce {
-    70% { transform:translateY(0%); }
-    80% { transform:translateY(-15%); }
-    90% { transform:translateY(0%); }
-    95% { transform:translateY(-7%); }
-    97% { transform:translateY(0%); }
-    99% { transform:translateY(-3%); }
-    100% { transform:translateY(0); }
-}
-
-.bounce2 {
-  animation: bounce2 2s ease infinite;
-}
-@keyframes bounce2 {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-30px);}
-	60% {transform: translateY(-15px);}
-}
-    */}
     </>
   )
 }
