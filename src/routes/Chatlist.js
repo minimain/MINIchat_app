@@ -2,7 +2,8 @@ import Chatfriend from 'component/Chatfriend';
 import Navigation from 'component/Navigation';
 import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
-import {CiSearch, CiChat2} from "react-icons/ci";
+import { CiChat2} from "react-icons/ci";
+import { BiSearchAlt } from "react-icons/bi";
 import profileimg from 'data/profileimg.json';
 import axios from 'axios';
 import Header from 'component/Header';
@@ -35,7 +36,7 @@ useEffect(() =>{
 <form className="search_box">
        <fieldset className="search_inner">
          <legend className="blind">검색창</legend>
-         <i><CiSearch/></i>
+         <i><BiSearchAlt/></i>
          <input type="search" name="search" id="search" placeholder="친구 이름, 채팅방 이름을 입력하세요." />
        </fieldset>
      </form>

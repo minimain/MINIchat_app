@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'styles/chatlist.scss';
 
 
 function Chatfriend({name, username, image}) {
@@ -7,7 +8,7 @@ function Chatfriend({name, username, image}) {
   return (
     
     <>
-    {/* 홈 친구리스트 */}
+    {/* 친구리스트 */}
     <section className="main_section">
      <ul>
      <li>
@@ -18,7 +19,7 @@ function Chatfriend({name, username, image}) {
            <span className="chats_name">{name}</span>
            <span className="chats_latest">{username}</span>
          </span>
-         <span className="chats_time"><span>17</span>:<span>33</span></span>
+         <span className="chats_time"><span>11</span>:<span>15</span></span>
          </Link>
      </li>
      </ul>

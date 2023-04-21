@@ -3,8 +3,7 @@ import axios from 'axios';
 import Header from 'component/Header';
 import Navigation from 'component/Navigation';
 import Friend from 'component/Friend';
-import {CiSearch} from "react-icons/ci";
-import { BsGearFill } from "react-icons/bs";
+import { BiSearchAlt } from "react-icons/bi";
 import profileimg from 'data/profileimg.json';
 import'styles/home.scss';
 import { Link } from 'react-router-dom';
@@ -31,14 +30,14 @@ useEffect(() =>{
     <>
     <Header 
      h1="Friend" span="1" 
-     iconback="Manage" i = <BsGearFill/> className = "header"/>
+     iconback="Manage" className = "header"/>
 
     <main className='home'>
     <div className='friends'>  
     <form className="search_box">
       <fieldset className="search_inner">
         <legend className="blind">검색창</legend>
-        <i><CiSearch/></i>
+        <i><BiSearchAlt/></i>
         <input type="search" name="search" id="search" placeholder="친구 이름과 채팅방이름으로 검색하세요." className='home_input_search'/>
       </fieldset>
     </form>
@@ -63,7 +62,7 @@ useEffect(() =>{
    
     </main>
 
-    <>
+    <div className='friend_list_home'>
       {friend.map((friends,index)=><Friend
                                      key={index}
                                      id={friends.id}
@@ -76,7 +75,7 @@ useEffect(() =>{
 
       )}
       
-    </>
+    </div>
 
     <Navigation/>
     </>

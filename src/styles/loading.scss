@@ -1,6 +1,10 @@
 @import url(Reset.scss);
 $main-title_color: #1573ff;
 $main_bakcground: #e0edff; 
+$soso-color:#ffd5ee;
+$main-color:#ff98d6;
+$background:#ffff98;
+$font-clor:#241f1f;
 
 .loading{
 position: relative;
@@ -10,29 +14,29 @@ display: flex;
 flex-direction: column;
 align-items: center;
 line-height: 1.1;
-background: $main_bakcground;
+background: $background;
 overflow: hidden;
   span:first-of-type{
     position: absolute;left: -100px;top: -100px;
     // width: 60%;height: 30%;
     width: 300px;height: 300px;
-    background-color: rgb(244, 255, 127);
+    background-color: $soso-color;
     border-radius: 50%;
     max-width: 300px;
   }
   span:nth-of-type(2){
-    position: absolute;right: -170px;top: 120px;
+    position: absolute;right: -110px;top: 120px;
     // width: 60%;height: 30%;
     width: 250px;height: 250px;
-    background-color: rgb(127, 180, 255);
+    background-color: $soso-color;
     border-radius: 50%;
     max-width: 300px;
   }
   p:first-of-type{
     font-size: 70px;
     font-weight: bold;
-    color: $main-title_color;
-    text-shadow: 5px 4px 2px #aaccff;
+    color: $main-color;
+    text-shadow: 5px 4px 2px #d9d9d9;
     margin-top: 300px;
     animation: ani1 1s ease-out 0s infinite;
   }
@@ -43,12 +47,12 @@ overflow: hidden;
   p:last-of-type{
     font-size: 40px;
     font-weight: bold;
-    color: $main-title_color;
+    color: $main-color;
     text-align: center;
     &::after{
       content: "";display: block;clear: both;
       width: 130px;height: 18px;
-      background-color: #9fbdd65c;
+      background-color: #dedede5c;
       margin-top: 12px;
       border-radius: 50%; 
     }
@@ -57,7 +61,7 @@ overflow: hidden;
     position: absolute;left: 50px;top: 530px;
     // width: 34%;height: 17%;
     width: 150px;height: 150px;
-    background-color: rgb(255, 136, 127);
+    background-color: $soso-color;
     border-radius: 50%;
     max-width: 300px;
   }
@@ -65,7 +69,7 @@ overflow: hidden;
     position: absolute;right: -100px;bottom: -50px;
     // width: 60%;height: 30%;
     width: 250px;height: 250px;
-    background-color: rgb(255, 127, 255);
+    background-color: $soso-color;
     border-radius: 50%;
     max-width: 300px;
   }

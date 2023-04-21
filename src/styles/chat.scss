@@ -1,13 +1,16 @@
 @import url(Reset.scss);
 @import url(Common.scss);
 
-$main-title_color: #1573ff;
-$main_bakcground: #e0edff; 
+$soso-color:#ffd5ee;
+$main-color:#ff98d6;
+$background:#ffff98;
+$font-clor:#241f1f;
 
-.chat_boxs{
-  position: fixed;left: 0;top: 0;z-index: 1;
-  width: 100%;height: 64px;display: flex;flex-direction: column;
-  background: linear-gradient(180deg, rgba(224,237,255,1) 0%, rgba(255,255,255,1) 100%);color: #000;padding: 0 15px;box-sizing: border-box;overflow:hidden;
+.header_color{
+  z-index: 1;
+  position: fixed;left: 0;top: 0;
+  width: 100%;height: 70px;display: flex;flex-direction: column;border-radius: 0 0 10px 10px;
+  background: #f8f8f8;color: $font-clor;padding: 0 15px;box-sizing: border-box;overflow:hidden;
     .status_bar{ 
     display: flex;flex-direction: row;justify-content: space-between;align-items: center;height: 100%;
     div{
@@ -27,39 +30,37 @@ $main_bakcground: #e0edff;
 
   }
   .title_bar{
-    display: flex;flex-direction: row;justify-content: space-between;align-items: center;height: 62.5%;padding-bottom: 10px;
+    display: flex;flex-direction: row;justify-content: space-between;align-items: center;height: 62.5%;
+    padding-bottom: 15px;
     *{
       flex: 1;font-size: 16px;
       //border: 1px solid red;
     }
     h1{
       order: 2;text-align: center;
-      span{
-        color: #000;
-      }
+      font-size: 24px;font-weight: bold;color: $main-color;
     }
     .left_item{
-      order: 1;text-align: left;
+      order: 1;text-align: left;margin-top: 3px;
       a{
-        color: #000;opacity: 0.5;
+        color: $font-clor;
       }
     }
     .right_item{
       order: 3;text-align: right;font-size: 20px;
       a{
-        color: #000;
+        color: $font-clor;
       }
     }
   }
 
 }
 
-// -----------------
 
 .main{position: relative;
-  height: 100vh;
+  height: calc(100vh + 100%);
   display: flex;flex-direction: column;
-  padding-top: 64px;background: #fff;width: 100%;padding-bottom: 50px;
+  padding-top: 64px;background: #f8f8f8;width: 100%;padding-bottom: 50px;
   .date_info{
     opacity: 0.5;text-align: center;margin: 10px;
   }
@@ -76,18 +77,19 @@ $main_bakcground: #e0edff;
       align-items: flex-end;
       position: relative;margin-bottom: 20px;
       .my_box{
-        font-size: 16px;line-height: 1;margin: 5px;padding: 10px 15px;border-radius: 15px 15px 0 15px;background:$main_bakcground;
+        font-size: 15px;font-weight: bold;color: $font-clor;
+        line-height: 1;margin: 5px;padding: 10px 15px;border-radius: 15px 15px 0 15px;background:$soso-color;
+        box-shadow: 4px 4px 5px #d6d6d6;
       }
       img{
-        // position: absolute;top: 0;left: 0;
-        margin: 10px 0;width: 110px;height: 110px;background-size: cover;
+        margin: 10px;width: 110px;height: 110px;background-size: cover;
         border-radius: 20px;
       }
       span{
         display: inline;margin-top: 5px;font-size: 12px;
         position: relative;
       }
-      .trash_icon{background: transparent;border: none;position: absolute;right: 100px;bottom: 0px;font-size: 15px;color: #ccc;}
+      .trash_icon{background: transparent;border: none;position: absolute;right: 100px;bottom: 0px;font-size: 15px;color: #A4A9CE;}
     }
     .chatmy:last-of-type{margin-bottom:100px;}
   }
@@ -96,7 +98,8 @@ $main_bakcground: #e0edff;
 
 
   .chat{
-    font-size: 16px;line-height: 1;margin: 5px;padding: 10px 15px;border-radius: 15px 15px 15px 0;background:$main_bakcground;
+    font-size: 15px;line-height: 1;margin: 5px;padding: 10px 15px;border-radius: 15px 15px 15px 0;background:$background;box-shadow: 4px 4px 5px #d6d6d6;
+    font-weight: bold;color: $font-clor;
   }
 
 
@@ -104,13 +107,15 @@ $main_bakcground: #e0edff;
 
   
   .other{
-    margin-top: 20px;margin-left: 55px;
+    margin-top: 20px;margin-left: 85px;
     .profile_img{
-      position: absolute;left: -55px;top: -5px;width: 35px;height: 35px;
-      img{width: 40px;height: 40px;border-radius: 50%;}
+      position: absolute;left: -65px;top: -5px;width: 35px;height: 35px;
+      img{width: 60px;height: 60px;border-radius: 50%;
+      background-size: cover;}
     }
     .profile_name{
       display: block;font-weight: bold;margin: 5px;
+      font-size: 18px;color: $font-clor;
     }
     .chat_time{
       position: absolute;right: -30px;bottom: -5px;width: 50px;opacity: 0.5;
@@ -121,19 +126,29 @@ $main_bakcground: #e0edff;
 // #e0edff  | #1573ff  
 
 footer{
-  display: flex;justify-content: space-around;align-items: center;position: fixed;left: 0;bottom: 0;width: 100%;height: 60px;background: #e0edff;
- 
-
+  display: flex;justify-content: space-around;align-items: center;position: fixed;left: 0;bottom: 0;width: 100%;height: 80px;background: #fff;
 
   form{
-    width: calc(100% - 40px);display: flex;    justify-content: space-around;
+    width: calc(100% - 40px);display: flex;
+    justify-content: space-around;
     align-items: center;
-    .chat_input{width: 85%;padding: 10px 15px;border-radius: 25px;border: 1px solid #e5e5e5;}
-    .chat_input_value{background: none;border: none;font-size: 15px;font-weight:bold;color: #1573ff ;text-shadow: 3px 3px 3px #e4e4e4;}
-    // text-indent: -9999px;overflow: hidden;
+
     .chat_insert_plus{
-      span{font-size: 20px;color: #1573ff;}
+      span{font-size: 25px;color: $main-color;
+        line-height: 60px;
+      }
     }
+    .chat_input{
+      width: 75%;padding: 14px 15px;border-radius: 25px;background: $background;box-shadow: 4px 4px 4px #dedede;
+      border: none;
+      &::placeholder{padding-left: 5px;}
+
+    }
+    .chat_input_value{
+      transform: translateY(5px);
+      background: none;border: none;font-size: 26px;color: $main-color;
+    }
+
 
 
 

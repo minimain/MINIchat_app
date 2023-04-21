@@ -19,7 +19,7 @@ function AppRouter({isLoggeIn, userObj}) {
         <>
         <Route path='/' element={<Home userObj={userObj}/>} />
         <Route path='/chat' element={<Chat userObj={userObj}/>} />
-        <Route path='/more' element={<More />} />
+        <Route path='/more' element={<More userObj={userObj}/>} />
         <Route path='/find' element={<Find />} />
         <Route path='/chatlist' element={<Chatlist />} />
         <Route path='/profile' element={<Profile userObj={userObj}/>}/>

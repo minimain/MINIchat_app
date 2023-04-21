@@ -1,8 +1,12 @@
 import Header from 'component/Header';
 import React, { useEffect, useState } from 'react'
 import'styles/profile.scss';
+import { FaChevronLeft } from "react-icons/fa";
 import { FaPaintBrush } from "react-icons/fa";
 import { IoChatbubbleSharp } from "react-icons/io5";
+import { HiOutlinePencilAlt } from "react-icons/hi";
+import { FiCamera } from "react-icons/fi";
+import { AiOutlineCloudUpload } from "react-icons/ai";
 import {BsChevronLeft} from "react-icons/bs";
 import { addDoc, collection, doc, onSnapshot, orderBy, query, where } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
@@ -10,6 +14,7 @@ import { db, storage } from 'fbase';
 import { updateProfile } from 'firebase/auth';
 import { getDownloadURL, ref, uploadString } from 'firebase/storage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 function Profile({userObj}) {
@@ -153,7 +158,7 @@ const onSubmitName = async(e) =>{
 
   return (
   <div>
-    <Header iconback = {<BsChevronLeft/>} className="chatting"></Header>
+    <Header iconback = {<FaChevronLeft/>} className="header"></Header>
 
   <main className='profile_main_my'>
 
@@ -167,16 +172,16 @@ const onSubmitName = async(e) =>{
     
     <div className='background'>
     <label htmlFor="background-file" > 
-    <span className='img_edit_back'><FontAwesomeIcon icon="fa-solid fa-pencil" />
-    <span>배경이미지 편집</span></span>
+    <span className='img_edit_back'>
+    <FiCamera/>
+    </span>
     {/* <span>배경이미지 편집</span> */}
     </label>
 
     <input type='file' accept='image/*' onChange={onBackchange} id='background-file' style={{display:"none"}} />
 
     <button type='submit' value='수정완료' id='backimg_ok' className='back_ok'>
-    <FontAwesomeIcon icon="fa-solid fa-arrow-up-from-bracket" />
-    <span>저장</span>
+    <AiOutlineCloudUpload/>
     </button>
     
     </div>
@@ -191,23 +196,28 @@ const onSubmitName = async(e) =>{
       <img src={newattachment} alt='' className='profile_img_my'/>
     )}
   </div>
+
+  <div className='profile_btns'>
     <input type='file' accept='image/*' onChange={onFilechange} id='attach-file' style={{display:'none'}} />
     <label htmlFor='attach-file'>
-      <span className='profile_img_file'>파일</span>
+      <span className='profile_img_file'><FiCamera/></span>
     </label>
 
-  <button type='submit' value='프로필편집 완료' className='profile_img_btn'>프로필사진</button>
+  <button type='submit' value='프로필편집 완료' className='profile_img_btn'><AiOutlineCloudUpload/></button>
+  </div>
   </section>
 </form>
+
+<p className='profile_email_user'>{userObj.email}</p>
 
 {/* 프로필 이름 */}
 <form onSubmit={onSubmitName} className='profile_form_name'>
 <input type='text' onChange={onChange} value={newDisplayName} placeholder='이름을 입력해주세요' className="profile_name"/>
 
-<button type='submit' value='프로필이름 완료' className='profile_name_edit'>프로필이름</button>
+<button type='submit' value='프로필이름 완료' className='profile_name_edit'><HiOutlinePencilAlt/></button>
 </form>
 
-<p className='profile_email_user'>{userObj.email}</p>
+
 
   </main>
     </div>

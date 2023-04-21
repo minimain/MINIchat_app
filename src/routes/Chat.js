@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { collection, addDoc, query, orderBy, onSnapshot, where } from "firebase/firestore";
 import { db } from 'fbase';
-import {BsChevronLeft} from "react-icons/bs";
+import { FaChevronLeft } from "react-icons/fa";
 // import profileimg from 'data/profileimg.json';
 import'styles/chat.scss';
 import Chatbox from 'component/Chatbox';
@@ -39,13 +39,13 @@ function Chat({userObj}) {
 
   return (
    <>
-   <Header className="chat_boxs" iconback = <BsChevronLeft/> h1="Chatting"/>
+   <Header className="header_color" iconback = {<FaChevronLeft/>} h1="Chatting"/>
 
    <div className='main'>
   <span className="date_info">Thursday, March 23, 2023</span>
   <div className="chat_box other">
   <div className="other_info">
-    <span className="profile_img empty"><img src={image}/></span>
+    <span className="profile_img empty"><img src={image} alt=''/></span>
     <span className="profile_name">{name}</span>
   </div>
   <span className="chat">안녕하세요.</span>
@@ -69,15 +69,6 @@ function Chat({userObj}) {
 <footer>
 <Chatinsert userObj={userObj}/>
 </footer>
-
-
-
-
-
-
-
-
-
 
    </>
   )

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { collection, addDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadString } from 'firebase/storage';
+import { HiOutlinePaperAirplane } from "react-icons/hi2";
 import { v4 as uuidv4 } from 'uuid';
 import { db, storage } from 'fbase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -67,17 +68,18 @@ function Chatinsert({userObj}) {
     {/* 글작성 */}
     <form onSubmit={onSubmit} className='chat_insert'>
 
-    <input type='text' value={chat} placeholder='채팅을 입력해주세요' onChange={onChange} className='chat_input'/>
-
-    <input type='file' accept='image/*' onChange={onFilechange} style={{display:"none"}}/>
-
-    <input type='submit' name='submit' value='전송' className='chat_input_value'>
-    </input>
-
     <label htmlFor="attach-file" className='chat_insert_plus'>  
     <span><FontAwesomeIcon icon="fa-solid fa-plus" /></span>
     </label>
     <input type='file' accept='image/*' onChange={onFilechange} id='attach-file' style={{display:"none"}} />
+
+    <input type='text' value={chat} placeholder='채팅을 입력해주세요' onChange={onChange} className='chat_input'/>
+
+    <input type='file' accept='image/*' onChange={onFilechange} style={{display:"none"}}/>
+
+    <button type='submit' name='submit' value='전송' className='chat_input_value'>
+    <HiOutlinePaperAirplane/>
+    </button>
 
     {/* 이미지 미리보기 */}
     {attachment && (
