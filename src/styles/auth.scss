@@ -1,0 +1,26 @@
+@import url(Reset.scss);
+$main-title_color: #1573ff;
+$main_bakcground: #e0edff; 
+
+.auth_container{display: flex;flex-direction: column;height: 100vh;width: 100%;justify-content: center;align-items: center;
+background: $main_bakcground;
+  .auth_form{
+    width: 100%;max-width: 360px;
+    display: flex;flex-direction: column;
+    .auth_title{font-size: 40px;text-align: center;margin-bottom: 30px;font-weight: 600;color: $main-title_color;text-shadow: 5px 5px 2px #ccc;}
+    .auth_btns{
+      display: flex;flex-direction: column;margin-bottom: 30px;  
+    }
+    .auth_btn{
+      padding: 15px;margin-bottom: 15px;border-radius: 30px;border: 1px solid #cfcfcf;    
+      }
+    .log_btn{background: $main-title_color;color: #fff;font-size: 16px;font-weight: 600;}
+  }
+
+  .toggle_btn{font-size: 14px;border-bottom: 1px solid #ccc;margin-bottom: 35px;}
+
+  .social_log{position: relative;
+    button{border-radius: 50%;width: 60px;height: 60px;font-size: 30px;color: #05357e;margin-right: 15px;border: 1px solid #ccc;background-color: #fff;}
+  }
+  
+}

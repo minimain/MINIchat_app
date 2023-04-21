@@ -1,0 +1,246 @@
+@import url(Reset.scss);
+.chatting{
+  position: fixed;left: 0;top: 0;
+  width: 100%;height: 64px;display: flex;flex-direction: column;
+  background: transparent;color: #000000;padding: 0 15px;box-sizing: border-box;overflow:hidden;
+    .status_bar{ 
+    display: flex;flex-direction: row;justify-content: space-between;align-items: center;height: 100%;
+    div{
+      flex: 1;
+      //border: 1px solid red;
+    &:nth-child(1){
+      text-align: left;
+    }
+    &:nth-child(2){
+      text-align: center;
+    }
+    &:nth-child(3){
+      text-align: right;
+    }
+    *{padding: 3px;vertical-align: middle;}
+    }
+
+  }
+  .title_bar{
+    display: flex;flex-direction: row;justify-content: space-between;align-items: center;height: 62.5%;
+    *{
+      flex: 1;font-size: 16px;
+      //border: 1px solid red;
+    }
+    h1{
+      order: 2;text-align: center;
+      span{
+        color: #000000;
+      }
+    }
+    .left_item{
+      order: 1;text-align: left;
+      a{
+        color: #000000;opacity: 0.5;
+      }
+    }
+    .right_item{
+      order: 3;text-align: right;font-size: 20px;
+      a{
+        color: #000000;
+      }
+    }
+  }
+
+}
+
+// 프로필
+
+.profile_main_my{
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  // 배경
+  .profile_form_my{
+   width: 100%;position: relative;
+   .background_first{
+    background: url(../images/back8.jpg)no-repeat 0 0;
+    width: 100%;height: 460px;background-size: cover;
+    .backgroundImg{
+      width: 100%;height: 460px;object-fit: cover;
+    }
+   }
+
+   .background{
+    position: absolute;bottom: -30px;right:0;
+    .img_edit_back{
+
+      span{}
+    }
+
+    .back_ok{
+
+      span{}
+    }
+   }
+
+  }
+
+// 프로필
+  .profile_form_img{
+    
+    .profile_img{
+      .profile_imges{
+        background: url(../images/profile4.jpg)no-repeat 0 60%;
+      background-size: cover;
+      width: 110px;height: 110px;border-radius: 50%;
+      ;
+        .profile_img_my{
+
+        }
+      }
+
+      .profile_img_file{
+
+      }
+      .profile_img_btn{
+
+      }
+    }
+  }
+
+  // 이름
+  .profile_form_name{
+
+    .profile_name{
+
+    }
+
+    .profile_name_edit{
+
+    }
+  }
+
+  // 이메일
+  .profile_email_user{
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// 프로필
+// 백그라운드이미지
+
+// .profile_main_my{
+//   width: 100%;
+//   .profile_form_my{width: 100%;height: 540px;
+//      .backgroundImg{
+//       background-size: cover;width: 100%;height: 500px;
+//       }
+//      .background{display:flex;
+//        align-items: baseline;flex-direction: row-reverse;margin:0 auto;width: 96%;position:absolute;z-index:10;
+//        label:nth-of-type(1){order: 1;
+//          .img_edit_back{
+          
+//           display: block;
+//           width: 100%;text-align: center;
+//           font-size: 25px;margin-right: 15px;
+//           span{
+//             font-size: 11px;display: block;
+//             padding-top: 5px;}
+//           }
+//         }
+//       button.back_ok{
+//         order: 0;
+//         font-size: 25px;border: none;background: transparent;
+//         span{
+//           font-size: 12px;display: block;
+//           padding-top: 5px;
+//         }
+//        }
+//       }
+//     }
+
+//   // 프로필사진
+//   .profile_form{
+//     position: relative;top: 0;
+//     display: flex;justify-content: center;
+//     .profile{
+//       display: flex;
+//       justify-content: center;
+//       position: relative;
+//       width: 100%;
+//       .profile_img {
+//         position: absolute;
+//         left: 50%;
+//         top: -105px;
+//         width: 100px;
+//         height: 100px;
+//         margin-left: -50px;  
+//         img{
+//           width: 110px;height: 110px;border-radius: 50%;background-size: cover;
+//         }
+//       } 
+
+//       // span{z-index: 10;position: relative;top: -40px;left: -30px;
+//       //   font-size: 20px;}
+//       .profile_cont {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         margin-top: 40px;
+//         .profile_name {
+//             font-size: 16px;padding: 8px 15px;border-radius: 50px;font-size: 14px;border:  1px solid #9ac4ff;text-align: center;font-weight: bold;
+//           }
+//         .profile_email {
+//             width: 148px;
+//             height: 24px;
+//             margin:  15px 0 20px;
+//             padding: 0 5px;
+//             text-align: center;
+//             border: none;  
+//           }
+//         .profile_menu {
+//             display: flex;align-items: center;
+//               li:nth-of-type(1) {
+//                 margin: 0 10px;
+//                 span.icon{
+//                   label{
+//                     span{
+//                       display: flex;
+//                       flex-direction: column;
+//                       align-items: center;
+//                       font-weight: bold;
+//                       font-size: 30px;
+//                       span{
+//                         font-size: 12px;display: block;padding-top: 8px;
+//                         font-weight: normal;
+//                       }
+//                     }  
+//                   }
+//                 }
+//               }
+//               li:nth-of-type(2) {
+//                 margin: 0 10px;
+//                 // label{}
+//                 button{font-size: 30px;
+//                   background: transparent;
+//                   border: none;
+//                 span{font-size: 12px;display: block;padding-top: 5px;}
+//               }
+//               }
+//           }
+//         }
+  
+//     }
+//   }
+
+
+
+// }

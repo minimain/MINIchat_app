@@ -1,0 +1,150 @@
+@import url(Reset.scss);
+@import url(Common.scss);
+
+// header{
+//   h2{font-size: 15px;color: #064f8e;font-weight: bold;}
+// }
+
+.home{
+height: 85.8%;padding-top: 74px;width: 100%;overflow-x: hidden;
+// background-color: yellow;
+  .friends{
+    display: flex;flex-direction: row;justify-content: center;align-items: center;height: 7.3%;min-height: 53px;
+    // background-color: green;
+    .search_box{
+      width: 100%;
+      // background-color: blue;
+      
+      .search_inner{
+        display: flex;flex-direction: row;width: 88%;padding: 7px;background: #f1f2f4;border-radius: 20px;
+        margin: 0 auto;
+        i{font-size: 16px;color: #bebcc1;
+          align-self: center;margin-left: 20px;}
+        .home_input_search{
+          flex: 1;background: transparent;border: none;padding: 0 15px;
+           &::placeholder{text-align: center;}
+        }
+      }
+    }
+  }
+
+  // 내 프로필
+  .main_section{
+    header{
+      margin-left: 30px;margin-top: 20px;
+      h2{
+      font-weight:900;font-size: 25px;
+      letter-spacing: 0.3px;
+      color: #0f0f0f;
+      margin-bottom: 30px;
+      }
+    }
+
+    .home_profile_list{
+      display: flex;flex-direction: column;
+      li{
+        width: 100%;
+        a{
+          display: flex;flex-direction: row;align-items: center;font-size: 16px;width: 92%;padding: 5px 0;margin:0 auto;
+          .home_profile_img{
+            background: url(../images/profile4.jpg)no-repeat 0 60%;
+            width: 80px;height: 80px;background-size: cover;border-radius: 50%;
+            .home_profile_up{
+              width: 80px;height: 80px;object-fit: cover;border-radius: 50%;
+            }
+          }
+
+          .home_profile_name{
+            flex: auto;margin-left:20px;
+            font-size: 20px;font-weight: bold;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+
+    
+
+
+  }
+}
+
+// 친구리스트
+.main_section{
+  overflow-x: hidden;
+  .home_profile_list{
+    display: flex;flex-direction: column;
+    li{
+      width: 100%;
+      a{
+        display: flex;flex-direction: row;align-items: center;font-size: 16px;width: 92%;padding: 10px 0;margin:0 auto;
+        .home_profile_img{
+          display: block;
+          width: 100px;height: 100px;object-fit: cover;border-radius: 50%;
+          .home_profile_up{
+            display: block;
+            width: 80px;height: 80px;object-fit: cover;border-radius: 50%;
+          }
+        }
+
+        .profile_name{
+          flex: auto;margin-left: 6px;
+          font-size: 20px;font-weight: bold;
+          margin-bottom: 15px;
+          
+        }
+        .profile_messages{
+          height: 40px;line-height: 40px;margin-bottom: 15px;margin-right: 15px;padding: 0 18px;border-radius: 50px 50px 5px 50px;background: #B6A8FF;font-size: 18px;color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* 
+main.home{
+  height: 85.8%;padding-top: 64px;width: 100%;overflow-x: hidden;
+  .search_box{
+    display: flex;flex-direction: row;justify-content: center;align-items: center;height: 7.3%;min-height: 53px;
+    .search_inner{
+      display: flex;flex-direction: row;justify-content: space-between;width: 88%;height: 50%;background: #f1f2f4;border-radius: 5px;
+      i{
+        font-size: 16px;color: #bebcc1;align-self: center;margin-left: 15px;
+      }
+      input{
+        flex: 1;background: transparent;border: none;padding: 0 15px;
+      &::placeholder{text-align: center;}
+      }
+    }
+  }
+
+}
+
+.main_section{
+  header{
+    height: 32px;line-height: 32px;padding-left: 15px;border: 1px solid #ebebeb;border-left: none;border-right: none;color: #b6b5b1;position: relative;background: #fff;
+  }
+
+  .friends{padding-bottom: 70px;}
+  
+  ul{
+    display: flex;flex-direction: column;
+    li{ border-bottom: 1px solid #e2ebff;width: 98%;margin: 0 auto;
+      a{
+        display: flex;flex-direction: row;align-items: center;font-size: 16px;width: 100%;padding: 5px 0;
+      }
+    }
+  }
+  .profile_img{
+    width: 40px;height: 40px;background-size: cover;
+    img{width: 40px;height: 40px;border-radius: 50%;background-size: cover;border: 2px solid #a2c7ff;}
+  }
+  .profile_name{
+    flex: auto;margin-left: 6px;
+  }
+  .profile_messages{
+    height: 30px;line-height: 30px;margin-right: 15px;padding: 0 10px;border-radius: 50px 50px 0 50px;background: #53b5ff;font-size: 12px;color: #ffffff;
+  }
+} */
