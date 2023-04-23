@@ -76,11 +76,18 @@ function Auth() {
       </span>
 
       <div className='social_log'>
-        <button onClick={onSocialClick} name="google">
-        <FontAwesomeIcon icon="fa-brands fa-google" />
+        <button onClick={onSocialClick} name="google" className='auth_btn'>
+          <i>
+          <FontAwesomeIcon icon="fa-brands fa-google" />
+          </i>
+        
         </button>
         
-        <button onClick={onSocialClick} name="github"> <FontAwesomeIcon icon="fa-brands fa-github" /></button>
+        <button onClick={onSocialClick} name="github" className='auth_btn'>
+          <i>
+          <FontAwesomeIcon icon="fa-brands fa-github" />
+          </i> 
+        </button>
         
       </div>
     </div>

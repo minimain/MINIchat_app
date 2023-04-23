@@ -49,12 +49,17 @@ background: $background;
   }
 
   .social_log{position: relative;
-    button{
+    .auth_btn{
+      position: relative;z-index: 1;
       border-radius: 50%;width: 60px;height: 60px;font-size: 30px;color: #a8d5ff;margin-right: 15px;border: transparent;background-color: #fff;
       transition: all 0.2s linear 0s;
       cursor: pointer;
       &:hover{
       color: #2796ff;
+      }
+      i{
+      position: relative;z-index: -1;
+      font-size: 30px;line-height: 60px;
       }
     }
   }
